@@ -26,3 +26,37 @@ const arrayPop = (array) => {
 };
 console.log(arrayPop(array1));
 console.log(array1);
+
+// UNSHIFT
+
+
+// SHIFT
+
+
+// SOME
+
+// EVERY
+
+
+// FIND
+
+
+// FILTER
+
+// MAP
+
+
+// FINDINDEX
+
+// INCLUDES
+
+
+
+// INDEXOF
+
+
+// REDUCE
+
+
+// JOIN
+
