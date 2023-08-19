@@ -24,4 +24,5 @@ const arrayPop = (array) => {
   arrayLength(array) = n-1;
   return d;
 };
-
+console.log(arrayPop(array1));
+console.log(array1);
