@@ -21,13 +21,24 @@ const arrayPush = (array, newValue) => {
 const arrayPop = (array) => {
   let n = arrayLength(array);
   let d = array[n - 1];
-  arrayLength(array) = n-1;
+  array.length = n - 1;
   return d;
 };
-console.log(arrayPop(array1));
-console.log(array1);
+//console.log(arrayPop(array1));
+//console.log(array1);
 
 // UNSHIFT
+const arrayUnshift = (array, newValue) => {
+  let n = arrayLength(array);
+  do {
+    array[n] = array[n - 1];
+    n--;
+  } while (n > 0);
+  array[0] = newValue;
+  return arrayLength(array);
+};
+//console.log(arrayUnshift(array1, "foo"));
+//console.log(array1);
 
 
 // SHIFT
@@ -37,26 +48,24 @@ console.log(array1);
 
 // EVERY
 
-
 // FIND
+
+
+
+
 
 
 // FILTER
 
 // MAP
 
-
 // FINDINDEX
 
 // INCLUDES
 
-
-
 // INDEXOF
 
-
 // REDUCE
-
 
 // JOIN
 
