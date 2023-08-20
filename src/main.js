@@ -40,20 +40,25 @@ const arrayUnshift = (array, newValue) => {
 //console.log(arrayUnshift(array1, "foo"));
 //console.log(array1);
 
-
 // SHIFT
-
+const arrayShift = (array) => {
+  let f = array[0];
+  let n = 1;
+  do {
+    array[n - 1] = array[n];
+    n++;
+  } while (n < arrayLength(array));
+  array.length = arrayLength(array) - 1;
+  return f;
+};
+console.log(arrayShift(array1));
+console.log(array1);
 
 // SOME
 
 // EVERY
 
 // FIND
-
-
-
-
-
 
 // FILTER
 
@@ -68,4 +73,3 @@ const arrayUnshift = (array, newValue) => {
 // REDUCE
 
 // JOIN
-
