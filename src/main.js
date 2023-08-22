@@ -86,6 +86,35 @@ const arraySomeNew = (array, checkSomeNewCondition) => {
 // console.log(arraySomeNew(array1, checkSomeNewCondition));
 
 // EVERY
+const checkEveryCondition = (item) => item === 2;
+const arrayEvery = (array, checkEveryCondition) => {
+  let every = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (checkEveryCondition(array[i])) {
+      every++;
+    }
+  }
+  if (every === array.length) {
+    return true;
+  }
+  return false;
+};
+console.log(arrayEvery(array1, checkEveryCondition));
+
+const array2 = [2, 2, 2];
+const arrayEveryNew = (array, checkEveryCondition) => {
+  let everyNew = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (checkEveryCondition(array[i])) {
+      everyNew++;
+    }
+  }
+  if (everyNew === array.length) {
+    return true;
+  }
+  return false;
+};
+console.log(arrayEvery(array2, checkEveryCondition));
 
 // FIND
 
