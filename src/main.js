@@ -1,4 +1,4 @@
-const array1 = ["1", "2", "3", "hello"];
+const array1 = [1, 2, 3, "hello"];
 
 // LENGTH
 const arrayLength = (array) => {
@@ -6,7 +6,7 @@ const arrayLength = (array) => {
   array.forEach((index) => count++);
   return count;
 };
-//console.log(arrayLength(array1));
+// console.log(arrayLength(array1));
 
 // PUSH
 const arrayPush = (array, newValue) => {
@@ -14,8 +14,8 @@ const arrayPush = (array, newValue) => {
   array[n] = newValue;
   return n + 1;
 };
-//console.log(arrayPush(array1, "bye"));
-//console.log(array1);
+// console.log(arrayPush(array1, "bye"));
+// console.log(array1);
 
 // POP
 const arrayPop = (array) => {
@@ -24,8 +24,8 @@ const arrayPop = (array) => {
   array.length = n - 1;
   return d;
 };
-//console.log(arrayPop(array1));
-//console.log(array1);
+// console.log(arrayPop(array1));
+// console.log(array1);
 
 // UNSHIFT
 const arrayUnshift = (array, newValue) => {
@@ -37,8 +37,8 @@ const arrayUnshift = (array, newValue) => {
   array[0] = newValue;
   return arrayLength(array);
 };
-//console.log(arrayUnshift(array1, "foo"));
-//console.log(array1);
+// console.log(arrayUnshift(array1, "foo"));
+// console.log(array1);
 
 // SHIFT
 const arrayShift = (array) => {
@@ -51,10 +51,39 @@ const arrayShift = (array) => {
   array.length = arrayLength(array) - 1;
   return f;
 };
-console.log(arrayShift(array1));
-console.log(array1);
+// console.log(arrayShift(array1));
+// console.log(array1);
 
 // SOME
+const checkSomeCondition = (item) => item === "bar";
+const arraySome = (array, checkSomeCondition) => {
+  let check = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (checkSomeCondition(array[i])) {
+      check++;
+    }
+  }
+  if (check > 0) {
+    return true;
+  }
+  return false;
+};
+// console.log(arraySome(array1, checkSomeCondition));
+
+const checkSomeNewCondition = (item) => item >= 3;
+const arraySomeNew = (array, checkSomeNewCondition) => {
+  let check = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (checkSomeNewCondition(array[i])) {
+      check++;
+    }
+  }
+  if (check > 0) {
+    return true;
+  }
+  return false;
+};
+// console.log(arraySomeNew(array1, checkSomeNewCondition));
 
 // EVERY
 
