@@ -126,14 +126,29 @@ const arrayFind = (array, checkFindCondition) => {
     }
   }
   if (found.length > 0) {
-    return found;
+    return found[0];
   } else {
     return "Not found any element";
   }
 };
-console.log(arrayFind(array1, checkFindCondition));
+// console.log(arrayFind(array1, checkFindCondition));
 
 // FILTER
+const checkFilterCondition = (item) => item <= 2;
+const arrayFilter = (array, checkFindCondition) => {
+  let filter = [];
+  for (let i = 0; i < array.length; i++) {
+    if (checkFilterCondition(array[i])) {
+      filter.push(array[i]);
+    }
+  }
+  if (filter.length > 0) {
+    return filter;
+  } else {
+    return "Not found any element";
+  }
+};
+// console.log(arrayFilter(array1, checkFilterCondition));
 
 // MAP
 
