@@ -1,4 +1,5 @@
 const array1 = [1, 2, 3, "hello"];
+const array2 = [2, 2, 2];
 
 // LENGTH
 const arrayLength = (array) => {
@@ -99,9 +100,8 @@ const arrayEvery = (array, checkEveryCondition) => {
   }
   return false;
 };
-console.log(arrayEvery(array1, checkEveryCondition));
+// console.log(arrayEvery(array1, checkEveryCondition));
 
-const array2 = [2, 2, 2];
 const arrayEveryNew = (array, checkEveryCondition) => {
   let everyNew = 0;
   for (let i = 0; i < array.length; i++) {
@@ -114,9 +114,24 @@ const arrayEveryNew = (array, checkEveryCondition) => {
   }
   return false;
 };
-console.log(arrayEvery(array2, checkEveryCondition));
+// console.log(arrayEvery(array2, checkEveryCondition));
 
 // FIND
+const checkFindCondition = (item) => item <= 2;
+const arrayFind = (array, checkFindCondition) => {
+  let found = [];
+  for (let i = 0; i < array.length; i++) {
+    if (checkFindCondition(array[i])) {
+      found.push(array[i]);
+    }
+  }
+  if (found.length > 0) {
+    return found;
+  } else {
+    return "Not found any element";
+  }
+};
+console.log(arrayFind(array1, checkFindCondition));
 
 // FILTER
 
