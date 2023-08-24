@@ -155,6 +155,20 @@ const arrayFilter = (array, checkFindCondition) => {
 // FINDINDEX
 
 // INCLUDES
+const arrayIncludes = (array, x) => {
+  let includes = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === x) {
+      includes++;
+    }
+  }
+  if (includes > 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+// console.log(arrayIncludes(array1, 4));
 
 // INDEXOF
 
