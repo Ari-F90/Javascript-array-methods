@@ -171,6 +171,20 @@ const arrayIncludes = (array, x) => {
 // console.log(arrayIncludes(array1, 4));
 
 // INDEXOF
+const arrayIndexOf = (array, y) => {
+  let index = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === y) {
+      index = i;
+    }
+  }
+  if (index >= 0) {
+    return index;
+  } else {
+    return -1;
+  }
+};
+// console.log(arrayIndexOf(array1, "hello"));
 
 // REDUCE
 
