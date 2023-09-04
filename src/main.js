@@ -135,7 +135,7 @@ const arrayFind = (array, checkFindCondition) => {
 
 // FILTER
 const checkFilterCondition = (item) => item <= 2;
-const arrayFilter = (array, checkFindCondition) => {
+const arrayFilter = (array, checkFilterCondition) => {
   let filter = [];
   for (let i = 0; i < array.length; i++) {
     if (checkFilterCondition(array[i])) {
@@ -153,6 +153,21 @@ const arrayFilter = (array, checkFindCondition) => {
 // MAP
 
 // FINDINDEX
+const checkFindIndexCondition = (item) => item >= 2;
+const arrayFindIndex = (array, checkFindIndexCondition) => {
+  let index = [];
+  for (let i = 0; i < array.length; i++) {
+    if (checkFindIndexCondition(array[i])) {
+      index.push(i);
+    }
+  }
+  if (index.length > 0) {
+    return index[0];
+  } else {
+    return -1;
+  }
+};
+console.log(arrayFindIndex(array1, checkFindIndexCondition));
 
 // INCLUDES
 const arrayIncludes = (array, x) => {
