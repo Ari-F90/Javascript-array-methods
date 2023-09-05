@@ -59,7 +59,7 @@ const arrayShift = (array) => {
 const checkSomeCondition = (item) => item === "bar";
 const arraySome = (array, checkSomeCondition) => {
   let check = 0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (checkSomeCondition(array[i])) {
       check++;
     }
@@ -74,7 +74,7 @@ const arraySome = (array, checkSomeCondition) => {
 const checkSomeNewCondition = (item) => item >= 3;
 const arraySomeNew = (array, checkSomeNewCondition) => {
   let check = 0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (checkSomeNewCondition(array[i])) {
       check++;
     }
@@ -90,12 +90,12 @@ const arraySomeNew = (array, checkSomeNewCondition) => {
 const checkEveryCondition = (item) => item === 2;
 const arrayEvery = (array, checkEveryCondition) => {
   let every = 0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (checkEveryCondition(array[i])) {
       every++;
     }
   }
-  if (every === array.length) {
+  if (every === arrayLength(array)) {
     return true;
   }
   return false;
@@ -104,12 +104,12 @@ const arrayEvery = (array, checkEveryCondition) => {
 
 const arrayEveryNew = (array, checkEveryCondition) => {
   let everyNew = 0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (checkEveryCondition(array[i])) {
       everyNew++;
     }
   }
-  if (everyNew === array.length) {
+  if (everyNew === arrayLength(array)) {
     return true;
   }
   return false;
@@ -120,12 +120,12 @@ const arrayEveryNew = (array, checkEveryCondition) => {
 const checkFindCondition = (item) => item <= 2;
 const arrayFind = (array, checkFindCondition) => {
   let found = [];
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (checkFindCondition(array[i])) {
       found.push(array[i]);
     }
   }
-  if (found.length > 0) {
+  if (arrayLength(found) > 0) {
     return found[0];
   } else {
     return "Not found any element";
@@ -137,12 +137,12 @@ const arrayFind = (array, checkFindCondition) => {
 const checkFilterCondition = (item) => item <= 2;
 const arrayFilter = (array, checkFilterCondition) => {
   let filter = [];
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (checkFilterCondition(array[i])) {
       filter.push(array[i]);
     }
   }
-  if (filter.length > 0) {
+  if (arrayLength(filter) > 0) {
     return filter;
   } else {
     return "Not found any element";
@@ -156,23 +156,23 @@ const arrayFilter = (array, checkFilterCondition) => {
 const checkFindIndexCondition = (item) => item >= 2;
 const arrayFindIndex = (array, checkFindIndexCondition) => {
   let index = [];
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (checkFindIndexCondition(array[i])) {
       index.push(i);
     }
   }
-  if (index.length > 0) {
+  if (arrayLength(index) > 0) {
     return index[0];
   } else {
     return -1;
   }
 };
-console.log(arrayFindIndex(array1, checkFindIndexCondition));
+// console.log(arrayFindIndex(array1, checkFindIndexCondition));
 
 // INCLUDES
 const arrayIncludes = (array, x) => {
   let includes = 0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (array[i] === x) {
       includes++;
     }
@@ -188,7 +188,7 @@ const arrayIncludes = (array, x) => {
 // INDEXOF
 const arrayIndexOf = (array, y) => {
   let index = -1;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < arrayLength(array); i++) {
     if (array[i] === y) {
       index = i;
     }
@@ -204,3 +204,11 @@ const arrayIndexOf = (array, y) => {
 // REDUCE
 
 // JOIN
+const arrayJoin = (array) => {
+  let string = array[0];
+  for (let i = 1; i < arrayLength(array); i++) {
+    string = string + "," + array[i];
+  }
+  return string;
+};
+// console.log(arrayJoin(array1));
